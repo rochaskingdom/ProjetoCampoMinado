@@ -87,7 +87,7 @@ const fields = board => [].concat(...board)
 const hadExplosion = board => fields(board)
     .filter(field => field.exploded).length > 0
 
-const pendding = field => (filed.mined && !filed.flagged)
+const pendding = field => (field.mined && !field.flagged)
     || (!field.mined && !field.opened)
 
 const wonGame = board => fields(board).filter(pendding).length === 0
